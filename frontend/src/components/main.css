@@ -1,0 +1,265 @@
+:root {
+    /* ===== Main Brand ===== */
+    --primary: #2563EB;
+    --primary-hover: #1D4ED8;
+    --primary-light: #DBEAFE;
+
+    /* ===== Backgrounds ===== */
+    --background: #F8FAFC;
+    --surface: #FFFFFF;
+
+    /* ===== Text ===== */
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+
+    /* ===== Borders ===== */
+    --border: #E2E8F0;
+
+    /* ===== Status ===== */
+    --success: #16A34A;
+    --success-light: #DCFCE7;
+
+    --danger: #DC2626;
+    --danger-light: #FEE2E2;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--background);
+}
+
+.container{
+    padding: 20px;
+    width: 98%;
+    margin: 20px 0;
+}
+h2{
+    text-align: center;
+    color: var(--primary);
+}
+.input-div{
+    margin: 30px 0;
+    display: flex;
+    gap: 10px;
+}
+.input-div input{
+    width: 30%;
+}
+input{
+    padding: 10px;
+    font-size: 19px;
+    outline: none;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-secondary);
+}
+input:focus{
+    border-color: var(--primary);
+}
+input::placeholder{
+    color: var(--text-muted);
+}
+.add-subject, .add-task{
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary);
+    color: var(--primary-light);
+    cursor: pointer;
+    padding: 12px;
+    transition: 0.4s;
+}
+.add-subject:hover , .add-task:hover{
+    background-color: var(--primary-hover);
+}
+.no-sub{
+    color: var(--text-primary);
+    text-align: left;
+    font-size: 22px;
+}
+.sub-div{
+    padding: 20px;
+    background-color: var(--primary-light);
+    margin: 20px 0;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sub-card,.card{
+    padding: 20px;
+    background-color: var(--surface);
+    border-radius: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info,.infor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+.sub-card:hover{
+    scale: 1.01;
+}
+.sub-card h2 , .card h2{
+    color: var(--primary);
+}
+.sub-card p , .card p{
+    color: var(--text-muted);
+    font-size: 18px;
+
+}
+.delete{
+    background-color: var(--danger);
+    color: var(--success-light);
+}
+.delete:hover{
+    background-color: #961919;
+}
+.btnsub{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.completed {
+    background-color: var(--success-light);
+    border: 3px solid #86efac;
+}
+.completed .infor h2 {
+    color: #166534;
+    text-decoration: line-through;
+}
+.completed .infor p {
+    color: #6b7280;
+    text-decoration: line-through;
+}
+.completed-status {
+    margin-left: auto;
+    color: #16a34a;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.completed-status span {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--success);
+}
+
+.deleteAll{
+    background-color: var(--danger);
+    margin: auto;
+    margin-bottom: 20px;
+}
+.deleteAll:hover{
+    background-color: #961919;
+}
+.back{
+    background-color: var(--text-secondary);
+    color: var(--text-primary);
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px){
+
+    .container{
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    .input-div{
+        margin: 20px 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-div input{
+        width: 100%;
+    }
+
+    .input-div button{
+        width: 100%;
+        height: 44px;
+    }
+
+    .sub-div{
+        padding: 12px;
+        margin: 15px 0;
+    }
+
+    .sub-card,
+    .card{
+        padding: 15px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .info,
+    .infor{
+        width: 100%;
+    }
+
+    .sub-card h2,
+    .card h2{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .sub-card p,
+    .card p{
+        font-size: 16px;
+        word-break: break-word;
+    }
+
+    .btnsub{
+        width: 100%;
+        gap: 10px;
+    }
+
+    .btnsub button{
+        flex: 1;
+        width: auto;
+        min-height: 44px;
+    }
+
+    .completed-status{
+        margin-left: 0;
+        justify-content: flex-start;
+    }
+
+    .deleteAll{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .back{
+        position: static;
+        width: auto;
+        min-width: 80px;
+        margin-bottom: 15px;
+    }
+
+    .no-sub{
+        font-size: 20px;
+    }
+
+}

@@ -1,0 +1,149 @@
+:root {
+    /* Auth Brand */
+    --auth-primary: #4F46E5;
+    --auth-primary-hover: #4338CA;
+    --auth-primary-light: #EEF2FF;
+
+    /* Auth Background */
+    --auth-background: #F1F5F9;
+    --auth-surface: #FFFFFF;
+
+    /* Auth Text */
+    --auth-heading: #1E293B;
+    --auth-text: #64748B;
+    --auth-placeholder: #94A3B8;
+
+    /* Auth Input */
+    --auth-input-border: #CBD5E1;
+    --auth-input-focus: #4F46E5;
+
+    /* Auth Error */
+    --auth-error: #DC2626;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: var(--auth-background);
+}
+.container{
+    width: 70%;
+    margin: auto;
+}
+.card{
+    width: 400px;
+    height: fit-content;
+    padding: 30px 20px;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 15px;
+    background-color: var(--auth-surface);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+h2{
+    color: var(--auth-heading);
+}
+input{
+    padding: 10px 13px;
+    font-size: 19px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid var(--auth-input-border);
+    width: 100%;
+    color: var(--auth-text);
+}
+input::placeholder{
+    color: var(--auth-placeholder);
+}
+input:focus{
+    border-color: var(--auth-input-focus);
+}
+button{
+    padding: 7px 10px;
+    border-radius: 9px;
+    width: 130px;
+    height: 40px;
+    cursor: pointer;
+    background-color: var(--auth-primary);
+    border: none;
+    color: var(--auth-primary-light);
+    transition: 0.3s;
+}
+button:hover{
+    background-color: var(--auth-primary-hover);
+}
+p{
+    color: var(--auth-text);
+    margin: 5px 0;
+}
+.p{
+    color: var(--auth-text);
+}
+span{
+    color: var(--auth-heading);
+}
+span:hover{
+    color: var(--auth-primary);
+}
+hr{
+    border: none;
+    border-top: 1px solid var(--auth-primary);
+}
+.s{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    text-align: left;
+    align-self: flex-start;
+}
+
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px){
+
+    .container{
+        width: 100%;
+        padding: 15px;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 400px;
+        margin-top: 15%;
+        padding: 25px 18px;
+    }
+
+    .card h2{
+        font-size: 24px;
+    }
+
+    input{
+        width: 100%;
+        font-size: 17px;
+        padding: 11px 12px;
+    }
+
+    button{
+        width: 100%;
+        height: 44px;
+    }
+
+    .s{
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .p{
+        text-align: center;
+        line-height: 1.5;
+    }
+
+}
+
